@@ -15,8 +15,10 @@ header {
   margin: 0 8px;
   position: relative;
 }
-
-.header__navbar-item-separate::after {
+.header__navbar-item-has-qr:hover .header__qr{
+ display: block;
+}
+.header__navbar-item--separate::after {
   /*xổ nối |*/
   content: "";
   display: block;
@@ -33,6 +35,7 @@ header {
 }
 .header__navbar-item-link,
 .header__navbar-item {
+  
   display: inline-block;
   font-size: 1.4rem;
   color: var(--white-color);
@@ -48,7 +51,7 @@ header {
 .header__navbar-item-link{
     margin-right: 4px;
 }
-.header__navbar-item-strong {
+.header__navbar-item--strong {
   font-weight: 600;
 }
 .header__navbar-icon {
@@ -62,4 +65,42 @@ header {
 .header__navbar-title--no-poiter{
     cursor: text;
     color: var(--white-color);
+}
+/* header__qr */
+
+.header__qr{
+  display: none;
+  border-radius: 2px;
+  width: 185px;
+  background-color: var(--white-color);
+  position: absolute;
+  top:100%;
+  left: 0;
+  padding :8px;
+  margin-top: 15px;
+  animation: faidIn ease-out   0.2s;
+  
+}
+.header__qr::before{/*lớp giả để tạo khoảng nối hover */
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -18px;
+  height: 20px;
+  
+
+}
+.header__qr-img{
+  width: 100%;
+
+}
+.header__qr-apps{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__qr-code-download{
+  height: 15px;
+  
 }

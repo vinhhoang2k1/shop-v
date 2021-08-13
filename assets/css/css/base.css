@@ -24,3 +24,19 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+/* common margin */
+.mg-qr-left{
+ margin-left:11px ;
+}
+.mg-qr-right{
+  margin-right:11px;
+}
+@keyframes faidIn{
+   from{
+    opacity: 0;
+   }
+   to{
+    opacity: 1;
+   }
+
+}
