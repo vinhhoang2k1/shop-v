@@ -1,4 +1,5 @@
 :root {
+  --primary-color:#ee4d2d;
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
@@ -27,6 +28,48 @@ html {
 /* common margin */
 .mg-qr-left{
  margin-left:11px ;
+}:root {
+  --primary-color:#ee4d2d;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+* {
+  box-sizing: inherit; /*kế thừa css thẻ chứa nó */
+}
+html {
+  font-size: 62.5%; /*bằng 10px*/
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.gird {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.gird__full--width {
+  width: 100%;
+}
+.gird__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* common margin */
+.mg-qr-left{
+ margin-left:11px ;
+}
+.mg-qr-right{
+  margin-right:11px;
+}
+@keyframes faidIn{
+   from{
+    opacity: 0;
+   }
+   to{
+    opacity: 1;
+   }
+
 }
 .mg-qr-right{
   margin-right:11px;
