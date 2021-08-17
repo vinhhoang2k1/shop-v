@@ -82,7 +82,7 @@
   margin-top: 15px;
   animation: faidIn ease-out 0.2s;
 }
-.header__notify::before,
+
 .header__qr::before {
   /*lớp giả để tạo khoảng nối hover */
   content: "";
@@ -104,6 +104,15 @@
   height: 15px;
 }
 /*header notifycation  */
+/* .header__notify-uprow{
+  color: var(--white-color);
+  font-size: 40px;
+  position: absolute;
+  display: block;
+  top :20px;
+  right: 18px;
+  
+} */
 .header__notify {
   margin-top:15px;
   display: none;
@@ -116,7 +125,26 @@
   cursor: default;
   user-select: none;/*ko cho copy*/
   transform-origin: calc(100% - 30px) top ;
+  will-change: opacity transform;
   animation: headerNotify ease-in 0.25s;
+}
+.header__notify::before {
+  content: "";
+  /* padding: 10px 40px; */
+  border-style: solid;
+  position: absolute;
+  border-width: 20px 26px ; 
+  border-color: transparent transparent var(--white-color) transparent;
+  top: -35px;
+  right: 12px;
+}
+.header__notify::after{
+  content: "";
+  position: absolute;
+  top: -21px;
+  right: 0;
+  width: 100%;
+  height: 20px;
 }
 
 @keyframes headerNotify{
