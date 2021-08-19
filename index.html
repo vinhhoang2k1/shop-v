@@ -131,7 +131,16 @@
                             </a>
                         </div>
                         <div class="header__search">
-                            <input type="text" class="header__search-input" placeholder="Tìm Kiếm Sản Phẩm">
+                            <div class="header__search-input-wrap">
+                                <input type="text" class="header__search-input" placeholder="Tìm Kiếm Sản Phẩm">
+                                <div class="header__search-input-history">
+                                    <h3 class="header__search-input-history-heading">Lịch sử tìm kiếm</h3>
+                                    <ul class="header__search-input-history-list">
+                                        <li class="header__search-input-history-item">Kem dưỡng da</li>
+                                        <li class="header__search-input-history-item">Kem dưỡng ẩm</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="header__search-select-and-search-btn">
                                 <div class="header__search-select">
                                     <span class="header__search-select-label">trong shop</span>
@@ -145,8 +154,8 @@
 
                                             <li class="header__search-select-item">
                                                 <span class="header__search-select-item-label">Ngoài shop</span>
-                                              
-                                                
+
+
                                             </li>
                                         </ul>
                                     </div>
@@ -157,14 +166,38 @@
                             </div>
                         </div>
                         <div class="header__cart">
-                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <div class="header__cart-wrap">
+                                <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                <div class=" header__cart--no_cart">
+                                    <img src="./assets/image/no_cart.webp" alt="" class="header__cart--no_cart-img">
+                                    <span class="header__cart--no_cart-msg">Chưa có sản phẩm</span>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         <div class="container">
+            <div class="category">
+                <h3 class="category__heading">
+                    <i class=" category__heading-icon fas fa-list"></i>
+                    Danh mục
+                </h3>
+                <ul class="category-list">
+                    <li class="category-item">
+                        <a href="" class="category-item-link category-item-active">Trang điểm mắt</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="" class="category-item-link">Trang điểm môi</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="" class="category-item-link">Trang điểm mặt</a>
+                    </li>
 
+                </ul>
+            </div>
 
         </div>
         <footer>
