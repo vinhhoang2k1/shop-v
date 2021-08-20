@@ -5,14 +5,15 @@
   --text-color: #333;
 
   --height-header: 120px;
-  --height-header__navbar:40px;
-  --height-header__with-search: calc(var(--height-header) - var(--height-header__navbar))
+  --height-header__navbar: 40px;
+  --height-header__with-search: calc(
+    var(--height-header) - var(--height-header__navbar)
+  );
 }
 * {
   box-sizing: inherit; /*kế thừa css thẻ chứa nó */
 }
 html {
- 
   font-size: 62.5%; /*bằng 10px*/
   line-height: 1.6rem;
   font-family: "Roboto", sans-serif;
@@ -40,7 +41,7 @@ html {
   --black-color: #000;
   --text-color: #333;
   --border-color: #dbdbdb;
-  --text-gray-color:#999;
+  --text-gray-color: #999;
 }
 * {
   box-sizing: inherit; /*kế thừa css thẻ chứa nó */
@@ -51,17 +52,30 @@ html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
-.gird {
+.grid {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
 }
-.gird__full--width {
+.grid__full--width {
   width: 100%;
 }
-.gird__row {
+.grid__row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+/* test */
+.grid__column-2 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 16.66667%;
+}
+.grid__column-10 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 83.33333%;
 }
 /* common margin */
 .mg-qr-left {
@@ -81,17 +95,17 @@ html {
 .mg-qr-right {
   margin-right: 11px;
 }
-@keyframes growth{/* chuuyển động làm lớn lên*/
-  from{
-    transform:scale( var(--growth-from));
+@keyframes growth {
+  /* chuuyển động làm lớn lên*/
+  from {
+    transform: scale(var(--growth-from));
   }
-  to{
-    transform:scale( var(--growth-to));
+  to {
+    transform: scale(var(--growth-to));
   }
 }
 
 .modal {
-  
   position: fixed;
   top: 0;
   right: 0;
@@ -112,7 +126,6 @@ html {
   margin: auto;
   z-index: 1;
   animation: growth linear 0.1s;
- 
 }
 /* btn-style */
 .btn {
@@ -127,10 +140,22 @@ html {
   font-size: 1.4rem;
   cursor: pointer;
 }
-.btn.btn-nomal:hover{
+.btn.btn-nomal:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 .btn.btn-primary {
   background-color: var(--primary-color);
   color: var(--white-color);
+}
+/* selection */
+.select-input{
+  background-color: var(--white-color);
+  min-width: 200px;
+  padding:0 12px;
+  border-radius: 3px;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
 }
