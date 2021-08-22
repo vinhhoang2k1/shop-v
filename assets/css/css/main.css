@@ -83,6 +83,7 @@
   padding: 8px;
   margin-top: 15px;
   animation: fadeIn ease-out 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header__qr::before {
@@ -175,9 +176,6 @@
   padding-left: 0;
 }
 
-.header__notify-item {
-}
-
 .header__notify-link {
   display: flex;
   padding: 12px;
@@ -214,8 +212,7 @@
   font-size: 1.2rem;
   /* font-weight: 400; */
 }
-.header__notify-footer {
-}
+
 .header__notify-footer:active {
   background-color: #999;
 }
@@ -258,13 +255,6 @@
   cursor: pointer;
   color: var(--primary-color);
 }
-
-.auth-form__form {
-}
-
-.auth-form__group {
-}
-
 .auth-form__input {
   margin-top: 16px;
   width: 100%;
@@ -356,7 +346,6 @@
   height: var(--height-header__with-search);
   display: flex;
   align-items: center;
-
 }
 .header__logo {
   width: 200px;
@@ -474,15 +463,12 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
-.header__search-btn-button {
-}
 
 .header__cart {
   display: flex;
   justify-content: center;
   margin: auto;
   width: 150px;
-
 }
 .header__cart-icon {
   font-size: 2.6rem;
@@ -593,11 +579,13 @@
   background-color: var(--white-color);
 }
 .category__heading {
-  margin-top: 0;
-  padding: 12px 8px;
-  font-size: 1.7rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 0 0 8px 16px;
+  padding: 12px 8px 8px 5px;
+  font-size: 1.6rem;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
   color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 450;
 }
 .category__heading-icon {
   font-size: 1.4rem;
@@ -607,10 +595,25 @@
 }
 .category-list {
   padding: 0 0 8px 0;
+  margin: 0;
 }
 
 .category-item {
   list-style-type: none;
+  line-height: 2rem;
+  position: relative;
+}
+.category-item::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  top: 0;
+  left: 20px;
+  right: 25px;
+}
+
+.category-item:first-child::before {
+  display: none;
 }
 .category-item-active .category-item-link {
   color: var(--primary-color);
@@ -644,7 +647,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(75, 35, 35, 0.05);
   padding: 12px 22px;
   border-radius: 3px;
 }
@@ -661,6 +664,7 @@
 .home-filter__btn {
   margin-right: 12px;
   min-width: 90px;
+  background-color: var(--white-color);
 }
 .select-input {
   position: relative;
@@ -722,9 +726,6 @@
   color: var(--primary-color);
 }
 
-.home-filter__page-control {
-}
-
 .home-filter__page-btn {
   text-decoration: none;
   color: var(--text-color);
@@ -747,13 +748,12 @@
   text-decoration: none;
   margin-top: 10px;
   background-color: var(--white-color);
-  transition:transform linear 0.1s;/*chuyển động có thộc tính transform với will-change: transform và khi hover   transform: translateY(-1px); */
+  transition: transform linear 0.1s; /*chuyển động có thộc tính transform với will-change: transform và khi hover   transform: translateY(-1px); */
   will-change: transform;
   top: 0;
-  border-bottom-left-radius:2px ;
-  border-bottom-right-radius:2px ;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-
 }
 .home-product-item:hover {
   transform: translateY(-1px);
@@ -802,8 +802,6 @@
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .home-product-item__like-icon-emtipy {
   font-size: 1.4rem;
@@ -914,4 +912,40 @@ i.home-product-item__rating-gold {
   color: var(--white-color);
   font-size: 1.3rem;
   font-weight: 500;
+}
+/* pagination */
+.home-product__pagenation {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* respondsive */
+/* mobile and tablet */
+@media only screen and (max-width:63.9375em){
+   .category {
+    display: none;
+  }
+}
+/* mobile  max-width :740px*/
+@media only screen and (max-width: 46.1875em) {
+  .grid__column-2-4{
+    width: 50%;
+  }
+}
+/* tablet min-width :740px max-width:1023px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+ 
+  .grid__column-10{
+    width: 100%;
+  }
+  .grid__column-2-4-space{
+    width: 10%;
+  }
+  .footer-grid__column-2-4:last-child{
+    width: 30%;
+  }
+  .grid__column-2-4{
+    width: 25%;
+  }
+ 
 }
