@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/css/base.css">
     <link rel="stylesheet" href="/assets/css/css/main.css">
+    <link rel="stylesheet" href="/assets/css/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -25,7 +26,7 @@
     <div class="app">
         <header>
             <div class="header">
-                <div class="gird">
+                <div class="grid">
                     <nav class="header__navbar">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item-has-qr header__navbar-item--separate">
@@ -123,13 +124,21 @@
                         </ul>
 
                     </nav>
+
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <div class="header__mobile-search-checkbox">
+                            <label for="mobile-search-checkbox">
+                                <i class="mobile-search-checkbox-icon fas fa-search"></i>
+                            </label>
+                        </div>
+
+                        <div class="header__logo hide-on-tablet">
                             <a href="">
                                 <img src="./assets/image/a27d24_098fdfd37b514082997bfe0c192554b0_mv2.png" alt=""
                                     class="header__logo-img">
                             </a>
                         </div>
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-check">
                         <div class="header__search">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Tìm Kiếm Sản Phẩm">
@@ -176,8 +185,26 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class=" header__sort-bar">
+
+                        <li class="header__sort-bar-item">
+                            <a href="" class="header__sort-bar-link">Liên quan</a>
+                        </li>
+                        <li class="header__sort-bar-item">
+                            <a href="" class="header__sort-bar-link header__sort-bar-link--active">Mới nhất</a>
+                        </li>
+                        <li class="header__sort-bar-item">
+                            <a href="" class="header__sort-bar-link">Bán chạy</a>
+                        </li>
+                        <li class="header__sort-bar-item">
+                            <a href="" class="header__sort-bar-link">Giá</a>
+                        </li>
+
+                    </div>
                 </div>
             </div>
+           
         </header>
         <div class="app__container">
             <div class="grid">
@@ -204,8 +231,8 @@
                     </div>
                     <div class="grid__column-10">
 
-                        <div class="home-filter">
-                            
+                        <div class="home-filter hide-on-mobile-tablet">
+
                             <div class="home-filter-group">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="btn home-filter__btn">Phổ biến</button>
@@ -765,15 +792,15 @@
                 <div class="footer-bottom">
                     <div class="grid">
                         <div class="grid__row grid-row-licence">
-                    <p class="footer_text">2021 - bản quyền thuộc về v-shop</p>
-                </div>
+                            <p class="footer_text">2021 - bản quyền thuộc về v-shop</p>
+                        </div>
                     </div>
                 </div>
-                
-            </div>
 
+            </div>
+        </footer>
     </div>
-    </footer>
+
     </div>
     <!-- modal -->
     <!-- <div class="modal">
@@ -859,10 +886,10 @@
                             <span> Kết nối với Google</span>
                         </a>
                     </div>
-                </div> -->
-    </div>
-    </div>
-    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </body>
 
 </html>

@@ -12,6 +12,7 @@
   --height-header__with-search: calc(
     var(--height-header) - var(--height-header__navbar)
   );
+  --height-header__sort:46px;
 }
 * {
   box-sizing: inherit; /*kế thừa css thẻ chứa nó */
@@ -21,11 +22,6 @@ html {
   line-height: 1.6rem;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-}
-.gird {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
 }
 
 /* common margin */
@@ -45,7 +41,7 @@ html {
 }
 .grid {
   width: 1200px;
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
 }
 .grid__full--width {
@@ -226,7 +222,7 @@ html {
   margin-bottom: 16px;
 }
 .footer-heading-link:hover {
-  color: var(--primary-color) ;
+  color: var(--primary-color);
 }
 
 .footer-access__download-qr {
@@ -248,12 +244,11 @@ html {
 .footer-access__download-app-img {
   width: 100px;
 }
-.footer-bottom{
+.footer-bottom {
   background-color: #f5f5f5;
-   
 }
 .grid-row-licence {
- min-height: 100px;
+  min-height: 100px;
 }
 .footer_text {
   font-size: 2rem;

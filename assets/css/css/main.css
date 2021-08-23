@@ -347,11 +347,22 @@
   display: flex;
   align-items: center;
 }
+.header__mobile-search-checkbox{
+  display: none;
+}
+.mobile-search-checkbox-icon{
+  font-size: 2rem;
+  color: var(--white-color);
+  
+}
 .header__logo {
   width: 200px;
 }
 .header__logo-img {
   width: 120px;
+}
+.header__search-check:checked ~ .header__search{
+  display: flex;
 }
 .header__search {
   display: flex;
@@ -360,6 +371,8 @@
   background-color: #fff;
   height: 40px;
   justify-content: space-between;
+  /* transform: translateY(-50px);
+  opacity: 0; */
 }
 
 .header__search-input-wrap {
@@ -490,6 +503,7 @@
   box-shadow: 0 1px 2px var(--text-gray-color);
   border-radius: 2px;
   overflow: hidden;
+  z-index: 1;
 }
 .header__search-input-history-heading {
   margin: 10px;
@@ -566,6 +580,45 @@
   line-height: 1.2rem;
   color: var(--primary-color);
   padding-bottom: 10px;
+}
+.header__sort-bar { 
+ 
+  display: flex;
+  left: 0;
+  right: 0;
+  height: var(--height-header__sort);
+  border-top:1px solid #e5e5e5 ;
+  border-bottom: 1px solid #e5e5e5;
+  position: absolute;
+   display: none;
+}
+
+.header__sort-bar-item {
+  display: block;
+  flex: 1;
+  background-color: var(--white-color);
+  justify-content: center;
+}
+.header__sort-bar-item::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  border-right: 1px solid #e5e5e5 ;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__sort-bar-link {
+  border-right: 1px 5px solid #e5e5e5;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1.6rem;
+  height: 100%;
+  line-height:var(--height-header__sort);
+}
+.header__sort-bar-link--active{
+  color: var(--primary-color);
 }
 /* app container */
 .app__container {
@@ -917,35 +970,4 @@ i.home-product-item__rating-gold {
 .home-product__pagenation {
   margin-top: 50px;
   margin-bottom: 30px;
-}
-
-/* respondsive */
-/* mobile and tablet */
-@media only screen and (max-width:63.9375em){
-   .category {
-    display: none;
-  }
-}
-/* mobile  max-width :740px*/
-@media only screen and (max-width: 46.1875em) {
-  .grid__column-2-4{
-    width: 50%;
-  }
-}
-/* tablet min-width :740px max-width:1023px */
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
- 
-  .grid__column-10{
-    width: 100%;
-  }
-  .grid__column-2-4-space{
-    width: 10%;
-  }
-  .footer-grid__column-2-4:last-child{
-    width: 30%;
-  }
-  .grid__column-2-4{
-    width: 25%;
-  }
- 
 }
