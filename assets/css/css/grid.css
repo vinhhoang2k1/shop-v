@@ -9,7 +9,6 @@
    - c-o-3 : đứng từ vị trí các 3 cột
 
     gridSystem : grid -> row -> col   */
-
 .grid {
     width: 100%;
     display: block;

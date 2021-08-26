@@ -152,8 +152,7 @@ html {
   color: #555;
 }
 /* pagination */
-.grid-row-contact {
-}
+
 .pagination {
   padding: 0;
   display: flex;
@@ -189,6 +188,9 @@ html {
   opacity: 0.9;
 }
 /* footer */
+.footer{
+  border-top: 5px solid var(--primary-color);
+}
 
 .footer__heading {
   font-size: 1.8rem;
@@ -221,9 +223,7 @@ html {
 .footer-heading-link {
   margin-bottom: 16px;
 }
-.footer-heading-link:hover {
-  color: var(--primary-color);
-}
+
 
 .footer-access__download-qr {
   --footer-size-qr: 100px;
