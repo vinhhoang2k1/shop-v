@@ -231,11 +231,21 @@
   font-weight: 500;
 }
 /* authen modal */
-.auth-form {
+.auth-form1 {
+  display: none;
+  width: 500px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  z-index: 2000;
+  overflow: hidden;
+}
+.auth-form2 {
+  display: none;
   width: 500px;
   background-color: var(--white-color);
   border-radius: 5px;
   overflow: hidden;
+  z-index: 2000;
 }
 .auth-form__container {
   padding: 0 32px;

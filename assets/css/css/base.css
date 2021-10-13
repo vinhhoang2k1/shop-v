@@ -105,8 +105,11 @@ html {
   left: 0;
   display: flex;
   animation: fadeIn linear 0.1s;
+  z-index: 1000;
+  display: none;
 }
 .modal__overlay {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
